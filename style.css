@@ -503,3 +503,60 @@ footer {
         padding: 80px 5%;
     }
 }
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--bg-secondary);
+    overflow-y: auto;
+    padding-top: 60px;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    background-color: var(--primary-dark);
+    color: var(--primary-color);
+}
+
+/* Toggle Sidebar */
+.sidebar.active {
+    left: 0;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-color);
+    border: none;
+    color: var(--bg-primary);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.sidebar-toggle:hover {
+    background: var(--primary-dark);
+}
+
+/* Adjust main content when sidebar is open */
+body.sidebar-open .header, 
+body.sidebar-open .section-content {
+    margin-left: 250px;
+    transition: var(--transition);
+}

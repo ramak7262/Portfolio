@@ -75,3 +75,11 @@ document.querySelectorAll('.skill-card, .education-card, .project-card').forEach
     el.style.transform = 'translateY(20px)';
     observer.observe(el);
 });
+// Sidebar toggle functionality
+const sidebarToggle = document.getElementById('sidebar-toggle');
+const sidebar = document.getElementById('sidebar');
+
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    document.body.classList.toggle('sidebar-open');
+});
